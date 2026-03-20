@@ -1,23 +1,4 @@
-import { useState } from "react";
-
 export default function PricingSection() {
-  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annually">("annually");
-
-  const pricing = {
-    starter: {
-      monthly: 0,
-      annually: 0,
-    },
-    professional: {
-      monthly: 1990,
-      annually: 1590,
-    },
-    enterprise: {
-      monthly: 9990,
-      annually: 7990,
-    },
-  };
-
   return (
     <div className="w-full flex flex-col justify-center items-center gap-2">
       {/* Заголовок */}
@@ -37,69 +18,21 @@ export default function PricingSection() {
               </svg>
             </div>
             <div className="text-center flex justify-center flex-col text-[#37322F] text-xs font-medium leading-3 font-sans">
-              Тарифы и цены
+              Список литературы
             </div>
           </div>
 
           <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-serif tracking-tight">
-            Выберите подходящий план для вашего бизнеса
+            Главные труды Выготского
           </div>
 
           <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
-            Масштабируйте операции с гибкими тарифами, которые растут вместе с вашей командой.
-            <br />
-            Начните бесплатно, переходите на платный план когда будете готовы.
+            Три книги, которые изменили понимание психологии развития и педагогики на десятилетия вперёд.
           </div>
         </div>
       </div>
 
-      {/* Переключатель периода */}
-      <div className="self-stretch px-6 md:px-16 py-9 relative flex justify-center items-center gap-4">
-        <div className="w-full max-w-[1060px] h-0 absolute left-1/2 transform -translate-x-1/2 top-[63px] border-t border-[rgba(55,50,47,0.12)] z-0"></div>
-
-        <div className="p-3 relative bg-[rgba(55,50,47,0.03)] border border-[rgba(55,50,47,0.02)] backdrop-blur-[44px] backdrop-saturate-150 backdrop-brightness-110 flex justify-center items-center rounded-lg z-20 before:absolute before:inset-0 before:bg-white before:opacity-60 before:rounded-lg before:-z-10">
-          <div className="p-[2px] bg-[rgba(55,50,47,0.10)] shadow-[0px_1px_0px_white] rounded-[99px] border-[0.5px] border-[rgba(55,50,47,0.08)] flex justify-center items-center gap-[2px] relative">
-            <div
-              className={`absolute top-[2px] w-[calc(50%-1px)] h-[calc(100%-4px)] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.08)] rounded-[99px] transition-all duration-300 ease-in-out ${
-                billingPeriod === "annually" ? "left-[2px]" : "right-[2px]"
-              }`}
-            />
-
-            <button
-              onClick={() => setBillingPeriod("annually")}
-              className="px-4 py-1 rounded-[99px] flex justify-center items-center gap-2 transition-colors duration-300 relative z-10 flex-1"
-            >
-              <div
-                className={`text-[13px] font-medium leading-5 font-sans transition-colors duration-300 ${
-                  billingPeriod === "annually" ? "text-[#37322F]" : "text-[#6B7280]"
-                }`}
-              >
-                Ежегодно
-              </div>
-            </button>
-
-            <button
-              onClick={() => setBillingPeriod("monthly")}
-              className="px-4 py-1 rounded-[99px] flex justify-center items-center gap-2 transition-colors duration-300 relative z-10 flex-1"
-            >
-              <div
-                className={`text-[13px] font-medium leading-5 font-sans transition-colors duration-300 ${
-                  billingPeriod === "monthly" ? "text-[#37322F]" : "text-[#6B7280]"
-                }`}
-              >
-                Ежемесячно
-              </div>
-            </button>
-          </div>
-
-          <div className="w-[3px] h-[3px] absolute left-[5px] top-[5.25px] bg-[rgba(55,50,47,0.10)] shadow-[0px_0px_0.5px_rgba(0,0,0,0.12)] rounded-[99px]"></div>
-          <div className="w-[3px] h-[3px] absolute right-[5px] top-[5.25px] bg-[rgba(55,50,47,0.10)] shadow-[0px_0px_0.5px_rgba(0,0,0,0.12)] rounded-[99px]"></div>
-          <div className="w-[3px] h-[3px] absolute left-[5px] bottom-[5.25px] bg-[rgba(55,50,47,0.10)] shadow-[0px_0px_0.5px_rgba(0,0,0,0.12)] rounded-[99px]"></div>
-          <div className="w-[3px] h-[3px] absolute right-[5px] bottom-[5.25px] bg-[rgba(55,50,47,0.10)] shadow-[0px_0px_0.5px_rgba(0,0,0,0.12)] rounded-[99px]"></div>
-        </div>
-      </div>
-
-      {/* Карточки тарифов */}
+      {/* Карточки трудов */}
       <div className="self-stretch border-b border-t border-[rgba(55,50,47,0.12)] flex justify-center items-center">
         <div className="flex justify-center items-start w-full">
           {/* Декоративный паттерн слева */}
@@ -116,43 +49,23 @@ export default function PricingSection() {
 
           {/* Контейнер карточек */}
           <div className="flex-1 flex flex-col md:flex-row justify-center items-center gap-6 py-12 md:py-0">
-            {/* Стартовый план */}
+            {/* Мышление и речь */}
             <div className="flex-1 max-w-full md:max-w-none self-stretch px-6 py-5 border border-[#E0DEDB] overflow-hidden flex flex-col justify-start items-start gap-12 bg-[rgba(255,255,255,0)]">
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Стартовый</div>
+                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Мышление и речь</div>
                   <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5 font-sans">
-                    Идеально для частных лиц и небольших команд, которые только начинают.
+                    Главный труд Выготского. Анализ взаимосвязи языка и мышления, роли слова в развитии сознания.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
                     <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px] font-serif">
-                      <span className="invisible">{pricing.starter[billingPeriod]} руб.</span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: billingPeriod === "annually" ? 1 : 0,
-                          transform: `scale(${billingPeriod === "annually" ? 1 : 0.8})`,
-                          filter: `blur(${billingPeriod === "annually" ? 0 : 4}px)`,
-                        }}
-                      >
-                        {pricing.starter.annually} руб.
-                      </span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: billingPeriod === "monthly" ? 1 : 0,
-                          transform: `scale(${billingPeriod === "monthly" ? 1 : 0.8})`,
-                          filter: `blur(${billingPeriod === "monthly" ? 0 : 4}px)`,
-                        }}
-                      >
-                        {pricing.starter.monthly} руб.
-                      </span>
+                      1934
                     </div>
                     <div className="text-[#847971] text-sm font-medium font-sans">
-                      в {billingPeriod === "monthly" ? "месяц" : "год"}, за пользователя.
+                      год издания
                     </div>
                   </div>
                 </div>
@@ -160,18 +73,18 @@ export default function PricingSection() {
                 <div className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center cursor-pointer hover:bg-[#2A2520] transition-colors">
                   <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0.20)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
                   <div className="flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
-                    Начать бесплатно
+                    Основная работа
                   </div>
                 </div>
               </div>
 
               <div className="self-stretch flex flex-col justify-start items-start gap-2">
                 {[
-                  "До 3 проектов",
-                  "Базовые инструменты документации",
-                  "Поддержка сообщества",
-                  "Стандартные шаблоны",
-                  "Базовая аналитика",
+                  "Теория понятий",
+                  "Речь и мышление",
+                  "Внутренняя речь",
+                  "Развитие значений слов",
+                  "Роль языка в психике",
                 ].map((feature, index) => (
                   <div key={index} className="self-stretch flex justify-start items-center gap-[13px]">
                     <div className="w-4 h-4 relative flex items-center justify-center">
@@ -193,43 +106,23 @@ export default function PricingSection() {
               </div>
             </div>
 
-            {/* Профессиональный план */}
+            {/* Психология развития человека */}
             <div className="flex-1 max-w-full md:max-w-none self-stretch px-6 py-5 bg-[#37322F] border border-[rgba(55,50,47,0.12)] overflow-hidden flex flex-col justify-start items-start gap-12">
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[#FBFAF9] text-lg font-medium leading-7 font-sans">Профессиональный</div>
+                  <div className="text-[#FBFAF9] text-lg font-medium leading-7 font-sans">Психология развития человека</div>
                   <div className="w-full max-w-[242px] text-[#B2AEA9] text-sm font-normal leading-5 font-sans">
-                    Расширенные возможности для растущих команд и бизнеса.
+                    Сборник ключевых статей, включая концепцию ЗБР и культурно-исторической теории.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
                     <div className="relative h-[60px] flex items-center text-[#F0EFEE] text-5xl font-medium leading-[60px] font-serif">
-                      <span className="invisible">{pricing.professional[billingPeriod]} руб.</span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: billingPeriod === "annually" ? 1 : 0,
-                          transform: `scale(${billingPeriod === "annually" ? 1 : 0.8})`,
-                          filter: `blur(${billingPeriod === "annually" ? 0 : 4}px)`,
-                        }}
-                      >
-                        {pricing.professional.annually} руб.
-                      </span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: billingPeriod === "monthly" ? 1 : 0,
-                          transform: `scale(${billingPeriod === "monthly" ? 1 : 0.8})`,
-                          filter: `blur(${billingPeriod === "monthly" ? 0 : 4}px)`,
-                        }}
-                      >
-                        {pricing.professional.monthly} руб.
-                      </span>
+                      1960
                     </div>
                     <div className="text-[#D2C6BF] text-sm font-medium font-sans">
-                      в {billingPeriod === "monthly" ? "месяц" : "год"}, за пользователя.
+                      год издания
                     </div>
                   </div>
                 </div>
@@ -237,21 +130,18 @@ export default function PricingSection() {
                 <div className="self-stretch px-4 py-[10px] relative bg-[#FBFAF9] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center cursor-pointer hover:bg-gray-100 transition-colors">
                   <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
                   <div className="flex justify-center flex-col text-[#37322F] text-[13px] font-medium leading-5 font-sans">
-                    Начать
+                    Рекомендуется
                   </div>
                 </div>
               </div>
 
               <div className="self-stretch flex flex-col justify-start items-start gap-2">
                 {[
-                  "Безлимитные проекты",
-                  "Расширенные инструменты документации",
-                  "Приоритетная поддержка",
-                  "Пользовательские шаблоны",
-                  "Продвинутая аналитика",
-                  "Командное сотрудничество",
-                  "Доступ к API",
-                  "Пользовательские интеграции",
+                  "Зона ближайшего развития",
+                  "Культурно-историческая теория",
+                  "Интериоризация",
+                  "Высшие психические функции",
+                  "Роль обучения",
                 ].map((feature, index) => (
                   <div key={index} className="self-stretch flex justify-start items-center gap-[13px]">
                     <div className="w-4 h-4 relative flex items-center justify-center">
@@ -271,43 +161,23 @@ export default function PricingSection() {
               </div>
             </div>
 
-            {/* Корпоративный план */}
+            {/* Психология искусства */}
             <div className="flex-1 max-w-full md:max-w-none self-stretch px-6 py-5 bg-white border border-[#E0DEDB] overflow-hidden flex flex-col justify-start items-start gap-12">
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Корпоративный</div>
+                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Психология искусства</div>
                   <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5 font-sans">
-                    Полное решение для крупных организаций и предприятий.
+                    Анализ эстетической реакции как преодоления противоречий в художественном произведении.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
                     <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px] font-serif">
-                      <span className="invisible">{pricing.enterprise[billingPeriod]} руб.</span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: billingPeriod === "annually" ? 1 : 0,
-                          transform: `scale(${billingPeriod === "annually" ? 1 : 0.8})`,
-                          filter: `blur(${billingPeriod === "annually" ? 0 : 4}px)`,
-                        }}
-                      >
-                        {pricing.enterprise.annually} руб.
-                      </span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: billingPeriod === "monthly" ? 1 : 0,
-                          transform: `scale(${billingPeriod === "monthly" ? 1 : 0.8})`,
-                          filter: `blur(${billingPeriod === "monthly" ? 0 : 4}px)`,
-                        }}
-                      >
-                        {pricing.enterprise.monthly} руб.
-                      </span>
+                      1925
                     </div>
                     <div className="text-[#847971] text-sm font-medium font-sans">
-                      в {billingPeriod === "monthly" ? "месяц" : "год"}, за пользователя.
+                      год написания
                     </div>
                   </div>
                 </div>
@@ -315,21 +185,18 @@ export default function PricingSection() {
                 <div className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center cursor-pointer hover:bg-[#2A2520] transition-colors">
                   <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0.20)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
                   <div className="flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
-                    Связаться с отделом продаж
+                    Доп. материал
                   </div>
                 </div>
               </div>
 
               <div className="self-stretch flex flex-col justify-start items-start gap-2">
                 {[
-                  "Все из Профессионального",
-                  "Персональный менеджер",
-                  "Поддержка 24/7 по телефону",
-                  "Индивидуальный онбординг",
-                  "Расширенные функции безопасности",
-                  "Интеграция SSO",
-                  "Индивидуальные контракты",
-                  "White-label решения",
+                  "Эстетическая реакция",
+                  "Анализ художественных текстов",
+                  "Катарсис в искусстве",
+                  "Психология творчества",
+                  "Литературоведение",
                 ].map((feature, index) => (
                   <div key={index} className="self-stretch flex justify-start items-center gap-[13px]">
                     <div className="w-4 h-4 relative flex items-center justify-center">

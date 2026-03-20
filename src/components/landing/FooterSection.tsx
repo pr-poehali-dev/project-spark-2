@@ -6,10 +6,10 @@ export default function FooterSection() {
         <div className="h-auto p-4 md:p-8 flex flex-col justify-start items-start gap-8">
           {/* Бренд */}
           <div className="self-stretch flex justify-start items-center gap-3">
-            <div className="text-center text-[#49423D] text-xl font-semibold leading-4 font-sans">Бриллиант</div>
+            <div className="text-center text-[#49423D] text-xl font-semibold leading-4 font-sans">Выготский</div>
           </div>
           <div className="text-[rgba(73,66,61,0.90)] text-sm font-medium leading-[18px] font-sans">
-            Биллинг без усилий
+            Реферат по психологии, 2026
           </div>
 
           {/* Социальные сети */}
@@ -54,70 +54,61 @@ export default function FooterSection() {
 
         {/* Навигационные ссылки */}
         <div className="self-stretch p-4 md:p-8 flex flex-col sm:flex-row flex-wrap justify-start sm:justify-between items-start gap-6 md:gap-8">
-          {/* Колонка Продукт */}
+          {/* Колонка Разделы */}
           <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
             <div className="self-stretch text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">
-              Продукт
+              Разделы
             </div>
             <div className="flex flex-col justify-end items-start gap-2">
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Возможности
+                Введение
               </div>
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Тарифы
+                Биография
               </div>
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Интеграции
+                Теория
               </div>
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Превью в реальном времени
+                ЗБР
               </div>
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Мульти-агентное кодирование
+                Наследие
               </div>
             </div>
           </div>
 
-          {/* Колонка Компания */}
+          {/* Колонка Источники */}
           <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
-            <div className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">Компания</div>
+            <div className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">Источники</div>
             <div className="flex flex-col justify-center items-start gap-2">
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                О нас
+                Мышление и речь
               </div>
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Наша команда
+                Психология развития
               </div>
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Карьера
+                Психология искусства
               </div>
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Бренд
-              </div>
-              <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Контакты
+                Лурия о Выготском
               </div>
             </div>
           </div>
 
-          {/* Колонка Ресурсы */}
+          {/* Колонка Колледж */}
           <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
-            <div className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">Ресурсы</div>
+            <div className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">Колледж</div>
             <div className="flex flex-col justify-center items-center gap-2">
               <div className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Условия использования
+                Реферат
               </div>
               <div className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                API документация
+                Список литературы
               </div>
               <div className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Документация
-              </div>
-              <div className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Сообщество
-              </div>
-              <div className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Поддержка
+                Об авторе
               </div>
             </div>
           </div>
